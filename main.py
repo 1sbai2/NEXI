@@ -5,7 +5,7 @@ import google.generativeai as genai
 
 # Configure Streamlit page settings
 st.set_page_config(
-    page_title="SAMI ai pro",
+    page_title="SAMIGPT",
     page_icon=":🤖:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
@@ -33,7 +33,7 @@ if "chat_session" not in st.session_state:
 
 
 # Display the chatbot's title on the page
-st.title("🤖 SAMI AI")
+st.title("🤖 SAMIGPT")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -41,7 +41,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask something to SAMI AI PRO...")
+user_prompt = st.chat_input("Ask something to SAMIGPT...")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)
@@ -52,5 +52,6 @@ if user_prompt:
     # Display Gemini-Pro's response
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
+
 
 
