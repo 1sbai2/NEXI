@@ -16,7 +16,7 @@ st.set_page_config(
 # Set up Google Gemini-Pro AI model
 API_KEY = 'AIzaSyB9wqP35ciHa8h4bSlWKvlW0ExraR1zHAg'
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 
 # Function to translate roles between Gemini-Pro and Streamlit terminology
@@ -52,4 +52,5 @@ if user_prompt:
     # Display Gemini-Pro's response
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
+
 
