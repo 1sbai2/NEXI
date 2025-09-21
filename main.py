@@ -33,7 +33,7 @@ if "chat_session" not in st.session_state:
 
 
 # Display the chatbot's title on the page
-st.title("WELCOME TO SAMIGPT")
+st.title("🤖 WELCOME TO SAMIGPT")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -52,6 +52,7 @@ if user_prompt:
     # Display Gemini-Pro's response
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
+
 
 
 
